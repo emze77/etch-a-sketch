@@ -7,6 +7,7 @@ html {
 
 body {
   text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #container {
@@ -21,13 +22,37 @@ body {
 
 #container > .box {
     box-sizing: border-box;
-    /* border: 1px solid red; */
 }
 
 .bgColor1 {
-  background-color: #ebebeb;
+  background-color: #ffffff;
 }
 
 .bgColor2 {
-  background-color: #fceaea;
+  background-color: #eeeeee;
+}
+
+.paint {
+  background-color: black;
+}
+
+#settings {
+  width: 480px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  height: 2em;
+}
+
+.settingBar {
+  font-size: 1.2em;
+}
+
+#clearBtn {
+  border-radius: 5px;
+}
+
+#inputAmount {
+  width: 80px;
+  text-align: right;
 }

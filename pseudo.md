@@ -6,7 +6,9 @@
     ERSTELLE Elemente
     NUMMERIERE Elemente von 1 bis x. (für Schachbrettmuster)
 6. MALEN:
-    FÜGE HINZU Stileigenschaft eines Elementes bei Überfahren mit Maus
+    Alle Boxen auswählen.
+    Auf Event reagieren: Hover
+    Stileigenschaft der Box hinzufügen.
 7. ERSTELLE "Clear"-Button zum Zurücksetzen.
 
 1 % 16 = ??
