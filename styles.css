@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+  }
+  /* *, *:before, *:after {
+    box-sizing: inherit;
+  } */
+
+body {
+  text-align: center;
+}
+
+#container {
+    box-sizing: content-box;
+    margin: 0 auto;
+    width: 480px;
+    height: 480px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container > .box {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.bgColor1 {
+  background-color: #ebebeb;
+}
+
+.bgColor2 {
+  background-color: #fceaea;
+}
