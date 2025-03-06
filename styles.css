@@ -40,19 +40,12 @@ body {
   width: 480px;
   margin: 15px auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 2em;
 }
 
 .settingBar {
   font-size: 1.2em;
-}
-
-#clearBtn {
   border-radius: 5px;
-}
-
-#inputAmount {
   width: 80px;
-  text-align: right;
 }
