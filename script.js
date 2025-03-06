@@ -2,17 +2,11 @@ let amount = 16;
 let lineToggle = false;
 let boxWidth;
 let allBoxes;
+let boxesAltogehter
 
 const container = document.querySelector("#container");
 const sizeBtn = document.querySelector("#sizeBtn");
 const clearBtn = document.querySelector("#clearBtn");
-
-
-// doesn't work until now. How can it change automaticly?
-// document.querySelector("#inputAmount").addEventListener('input', () => {
-//     let amount = document.querySelector("#inputAmount").value;
-//     console.log(amount);
-// });
 
 
 createBoard();
@@ -20,7 +14,7 @@ createBoard();
 
 function createBoard () {
     boxWidth = 480 / amount;
-    let boxesAltogehter = amount * amount;
+    boxesAltogehter = amount * amount;
     for (i = 1; i <= boxesAltogehter; i++) {
         createBox(i);
         addChessboardClasses(i);
@@ -53,13 +47,20 @@ function addChessboardClasses(number) {
     return;
 }
 
+function deleteBoard () {
+    for (i = 1; i <= boxesAltogehter; i++) {
+        document.querySelector(".box").remove();
+    }
+}
+
 allBoxes.forEach(item => {
     item.addEventListener('mouseover', (e) => {
         const target = e.target;
-        // target.classList.add("paint");
         target.style.backgroundColor = "red";
     })
 })
+
+
 
 clearBtn.addEventListener('click', () => {
     allBoxes.forEach(item => {
@@ -67,8 +68,9 @@ clearBtn.addEventListener('click', () => {
     });
 
 
-
 sizeBtn.addEventListener('click', () => {
     amount = window.prompt("Choose board size:", "16");
+    deleteBoard();
     createBoard();
 })
+
