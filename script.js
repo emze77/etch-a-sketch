@@ -20,6 +20,7 @@ function createBoard () {
         addChessboardClasses(i);
     }
     allBoxes = document.querySelectorAll(".box");
+    enablePainting()
 }
 
 function createBox(number) {
@@ -53,24 +54,37 @@ function deleteBoard () {
     }
 }
 
+function enablePainting () {
 allBoxes.forEach(item => {
     item.addEventListener('mouseover', (e) => {
         const target = e.target;
         target.style.backgroundColor = "red";
     })
-})
+})}
 
-
+function checkValidation () {
+    if (amount < 0 || amount > 100) {
+        amount = parseInt(window.prompt("Invalid Number! Choose Board size between 1 and 100:", "16"));
+        checkValidation();
+    } else if (isNaN(amount)) {
+        amount = parseInt(window.prompt("Input is not a number! Choose Board size between 1 and 100:"), "16");
+        checkValidation();
+    } else {
+        return;
+    }
+}
 
 clearBtn.addEventListener('click', () => {
     allBoxes.forEach(item => {
         item.style.backgroundColor = "";})
     });
 
-
 sizeBtn.addEventListener('click', () => {
-    amount = window.prompt("Choose board size:", "16");
+    amount = parseInt(window.prompt("Choose Board size between 1 and 100:", "16"));
+    checkValidation();
     deleteBoard();
     createBoard();
 })
+
+
 
