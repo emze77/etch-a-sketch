@@ -55,12 +55,20 @@ function deleteBoard () {
 }
 
 function enablePainting () {
-allBoxes.forEach(item => {
-    item.addEventListener('mouseover', (e) => {
-        const target = e.target;
-        target.style.backgroundColor = "red";
-    })
+    allBoxes.forEach(item => {
+        item.addEventListener('mouseover', (e) => {
+            const target = e.target;
+            target.style.backgroundColor = randomizeRgb()})
 })}
+
+function randomizeRgb () {
+    let rgbArray = [];
+    for (i = 0; i < 3; i++) {
+        rgbArray.push(parseInt(Math.floor(Math.random() * 255)));
+        console.log(rgbArray);
+    }
+    return `rgb(${rgbArray[0]}, ${rgbArray[1]}, ${rgbArray[2]})`;
+}
 
 function checkValidation () {
     if (amount < 0 || amount > 100) {
