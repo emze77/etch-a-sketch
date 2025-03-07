@@ -58,6 +58,8 @@ function enablePainting () {
     allBoxes.forEach(item => {
         item.addEventListener('mouseover', (e) => {
             const target = e.target;
+            let targetRgba = target.style.backgroundColor;
+            // console.log(targetRgba;
             target.style.backgroundColor = randomizeRgb()})
 })}
 
