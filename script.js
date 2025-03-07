@@ -2,20 +2,16 @@ let amount = 16;
 let lineToggle = false;
 let boxWidth;
 let allBoxes;
-let boxesAltogehter
 
 const container = document.querySelector("#container");
 const sizeBtn = document.querySelector("#sizeBtn");
 const clearBtn = document.querySelector("#clearBtn");
 
-
 createBoard();
-
 
 function createBoard() {
     boxWidth = 480 / amount;
-    boxesAltogehter = amount * amount;
-    for (i = 1; i <= boxesAltogehter; i++) {
+    for (i = 1; i <= (amount * amount); i++) {
         createBox(i);
         addChessboardClasses(i);
     }
@@ -49,7 +45,7 @@ function addChessboardClasses(number) {
 }
 
 function deleteBoard() {
-    for (i = 1; i <= boxesAltogehter; i++) {
+    for (i = 1; i <= (amount * amount); i++) {
         document.querySelector(".box").remove();
     }
 }
@@ -72,12 +68,10 @@ function alphaMinus1 (target) {
         alpha = targetRgba.at(-2);
         alpha--;
     } else {
-        console.log("kein Alpha")
         alpha = 9;
     }
     return alpha;
 }
-
 
 function randomizeRgb() {
     let rgbArray = [];

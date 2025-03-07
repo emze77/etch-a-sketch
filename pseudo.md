@@ -10,23 +10,3 @@
     Auf Event reagieren: Hover
     Stileigenschaft der Box hinzufügen.
 7. ERSTELLE "Clear"-Button zum Zurücksetzen.
-
-1 % 16 = ??
-
-17 % 16 = 1
-18 % 16 = 2
-
-
-rgb (30, 50, 70)
-
-WENN vierter Buchstabe === a
-   DANN
-      HOLE letzte Zahl vor );
-      WENN 0 DANN: abbrechen
-      LETZTE ZAHL - 1
-      ERSETZE letzte Zahl
-   SONST
-      HINZU , 0.9)
-/= rgba, dann
-   targetAlpha = 1.0
-Sonst 
