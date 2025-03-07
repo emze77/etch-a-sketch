@@ -8,6 +8,23 @@ html {
 body {
   text-align: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: #8FADBF;
+  color: #70731F;
+}
+
+h1 {
+  font-size: 3em;
+  padding: 15px 0;
+}
+
+.container-strip {
+  background-color: #59522C;
+  padding: 30px 0;
+  width: 580px;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.493) 10px 10px 10px ;
+  display: flex;
+  justify-content: center;
 }
 
 #container {
@@ -19,14 +36,17 @@ body {
     border: 2px solid black;
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
 }
+
+
 
 #container > .box {
     box-sizing: border-box;
 }
 
 .bgColor1 {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(196, 197, 143);
 }
 
 .bgColor2 {
@@ -43,10 +63,17 @@ body {
   display: flex;
   justify-content: space-around;
   height: 2em;
+  padding: 20px
 }
 
-.settingBar {
-  font-size: 1.2em;
+.button {
+  /* display: flex; */
+  /* justify-self: center; */
+  text-align: center;
+  font-size: 1.5em;
   border-radius: 5px;
-  width: 80px;
+  width: 100px;
+  height: 40px;
+  background-color: #8B8C5E;
+  border: 2px solid #59522C;
 }
