@@ -2,7 +2,7 @@ let amount = 16;
 let lineToggle = false;
 let boxWidth;
 let allBoxes;
-let boxesAltogehter
+let boxesAltogehter;
 
 const container = document.querySelector("#container");
 const sizeBtn = document.querySelector("#sizeBtn");
@@ -72,7 +72,6 @@ function alphaMinus1 (target) {
         alpha = targetRgba.at(-2);
         alpha--;
     } else {
-        console.log("kein Alpha")
         alpha = 9;
     }
     return alpha;
