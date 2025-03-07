@@ -59,9 +59,9 @@ function enablePainting() {
         item.addEventListener('mouseover', (e) => {
             const target = e.target;
             let alpha = alphaMinus1(target);
-            let rgbArrayUse = randomizeRgb();
+            let rgbArrayClone = randomizeRgb();
             target.style.backgroundColor = 
-                `rgba(${rgbArrayUse[0]}, ${rgbArrayUse[1]}, ${rgbArrayUse[2]}, 0.${alpha})`;
+                `rgba(${rgbArrayClone[0]}, ${rgbArrayClone[1]}, ${rgbArrayClone[2]}, 0.${alpha})`;
             })
 })}
 
